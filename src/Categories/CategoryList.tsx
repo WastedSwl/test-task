@@ -11,7 +11,7 @@ const CategoryList: React.FC = () => {
     const categories = useSelector(selectCategories);
     const loading = useSelector((state: RootState) => state.category.loading);
     const error = useSelector((state: RootState) => state.category.error);
-    const totalPages = useSelector((state: RootState) => state.category.totalPages); // Предположим, что это значение получаете из Redux
+    const totalPages = useSelector((state: RootState) => state.category.totalPages);
     const [page, setPage] = useState(0);
 
     useEffect(() => { 
@@ -44,7 +44,7 @@ const CategoryList: React.FC = () => {
             </ul>
             <div className={styles.pagination}>
                 <button onClick={() => setPage(page - 1)} disabled={page <= 0}>Previous</button>
-                <span>{` Page ${page + 1} of ${totalPages} `}</span> {/* Отображение текущей страницы и общего количества страниц */}
+                <span>{` Page ${page + 1} of ${totalPages} `}</span> 
                 <button onClick={() => setPage(page + 1)} disabled={page >= totalPages - 1}>Next</button>
             </div>
             

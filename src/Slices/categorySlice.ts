@@ -1,4 +1,3 @@
-// Импорты
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import { RootState } from '../Store/store';  
 
